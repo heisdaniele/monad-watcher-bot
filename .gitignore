@@ -1,0 +1,15 @@
+# Environment
+.env
+venv/
+__pycache__/
+
+# State files
+state.json
+processed_txs.json
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
