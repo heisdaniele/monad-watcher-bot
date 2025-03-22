@@ -1,0 +1,17 @@
+services:
+  - type: worker
+    name: monad-watcher-bot
+    env: docker
+    buildCommand: docker build -t monad-watcher-bot .
+    startCommand: docker run monad-watcher-bot
+    plan: starter
+    healthCheckPath: /healthz
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_CHANNEL_ID
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_KEY
+        sync: false
